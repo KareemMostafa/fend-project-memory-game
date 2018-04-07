@@ -5,6 +5,14 @@ let movesCounter = 0;
 let ratingStars  = 0;
 let clicks       = 0;
 
+//Shuffle cards
+function cardsShuffler() {
+shuffle(holdCards);
+holdCards.forEach(function(elem) {
+    deck.append(elem);
+});
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
