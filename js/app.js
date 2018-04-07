@@ -13,6 +13,14 @@ holdCards.forEach(function(elem) {
 });
 }
 
+//Open cards when it's called and functions are applied to them
+function cardsOpener() {
+  for (var i = 0; i < cards.length ; i += 1) {
+    cards[i].onclick = function () {
+
+    }
+  }
+}
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
