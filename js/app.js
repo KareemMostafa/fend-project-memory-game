@@ -79,9 +79,9 @@ function opened(card) {
     displayer(card);
     activeCards.push(card);
     if(isMatch(activeCards)) {
-      matched();
+      matched(activeCards);
     }else{
-      notMatched();
+      notMatched(activeCards);
     }
   }else{
     activeCards.push(card);
