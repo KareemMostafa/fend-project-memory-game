@@ -38,6 +38,9 @@ function shuffle(array) {
 }
 
 function matcher(card) {
+  if(clicked(card)){
+    return;
+  }
   displayer(card);
   opened(card);
 }
