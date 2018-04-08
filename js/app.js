@@ -49,7 +49,13 @@ function displayer(card) {
 
 function movesHandler() {
   movesCounter ++;
-  document.querySelector(".moves").innerHTML = movesCounter;
+  if(movesCounter === 1) {
+    document.querySelector(".checker").innerHTML = "Move";
+    document.querySelector(".moves").innerHTML  = movesCounter;
+  }else{
+    document.querySelector(".moves").innerHTML  = movesCounter;
+    document.querySelector(".checker").innerHTML = "Moves";
+  }
 }
 
 function opened(card) {
