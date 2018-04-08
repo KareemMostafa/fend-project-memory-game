@@ -57,6 +57,14 @@ function movesHandler() {
     document.querySelector(".checker").innerHTML = "Moves";
   }
 }
+function isMatch(activeCards) {
+  let con0 = activeCards[0].innerHTML != activeCards[1].innerHTML;
+  let con1 = activeCards[0].isSameNode(activeCards[1]);
+  if(con0 || con1) {
+    return false;
+  }
+  return true;
+}
 
 function matched(activeCards) {
   for(var i = 0; i < activeCards.length; i++) {
