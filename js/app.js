@@ -69,7 +69,6 @@ function notMatched(activeCards) {
     activeCards[i].classList.remove("open");
     activeCards[i].classList.remove("show");
   }
-  activeCards = [];
 }
 
 function opened(card) {
