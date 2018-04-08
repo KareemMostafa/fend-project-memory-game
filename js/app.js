@@ -73,10 +73,12 @@ function matched(activeCards) {
 }
 
 function notMatched(activeCards) {
-  for (var i = 0; i < activeCards.length; i++) {
-    activeCards[i].classList.remove("open");
-    activeCards[i].classList.remove("show");
-  }
+  setTimeout(function(){
+    for (var i = 0; i < activeCards.length; i++) {
+      activeCards[i].classList.remove("open");
+      activeCards[i].classList.remove("show");
+    }
+  },800);
 }
 
 function opened(card) {
