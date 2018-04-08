@@ -111,3 +111,7 @@ h1 {
 .wrong {
     background: #ff0000;
 }
+
+.timer {
+  margin-left: 30px;
+}
