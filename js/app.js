@@ -48,7 +48,19 @@ function displayer(card) {
 }
 
 function opened(card) {
-
+  if(activeCards.length >0) {
+    movesHandler();
+    displayer(card);
+    activeCards.push(card);
+    if(isMatch(activeCards)) {
+      matched();
+    }else{
+      notMatched();
+    }
+  }else{
+    activeCards.push(card);
+    movesHandler();
+  }
 }
 
 cardsOpener();
