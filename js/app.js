@@ -118,4 +118,5 @@ function opened(card) {
   }
 }
 
+cardsShuffler();
 cardsOpener();
