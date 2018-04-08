@@ -1,6 +1,7 @@
 let cards        = document.querySelectorAll(".card");
 let holdCards    = [...cards];
 let deck         = document.querySelector(".deck");
+let activeCards  = [];
 let movesCounter = 0;
 let ratingStars  = 0;
 let clicks       = 0;
