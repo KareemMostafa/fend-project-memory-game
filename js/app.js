@@ -78,8 +78,10 @@ function opened(card) {
     activeCards.push(card);
     if(isMatch(activeCards)) {
       matched(activeCards);
+      activeCards = [];
     }else{
       notMatched(activeCards);
+      activeCards = [];
     }
   }else{
     activeCards.push(card);
