@@ -47,6 +47,11 @@ function displayer(card) {
   card.classList.add("show");
 }
 
+function movesHandler() {
+  movesCounter ++;
+  document.querySelector(".moves").innerHTML = movesCounter;
+}
+
 function opened(card) {
   if(activeCards.length >0) {
     movesHandler();
