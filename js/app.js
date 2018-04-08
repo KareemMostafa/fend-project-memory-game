@@ -38,11 +38,18 @@ function shuffle(array) {
 }
 
 function matcher(card) {
-  if(clicked(card)){
+  if(clicked(card)) {
     return;
   }
   displayer(card);
   opened(card);
+}
+
+function clicked(card) {
+  if(card.classList.contains("show") || card.classList.contains("open")) {
+    return true;
+  }
+  return false;
 }
 
 function displayer(card) {
