@@ -37,6 +37,7 @@ function shuffle(array) {
     return array;
 }
 
+//Specficy when to call displayer and opened
 function matcher(card) {
   if(clicked(card)) {
     return;
@@ -45,6 +46,7 @@ function matcher(card) {
   opened(card);
 }
 
+//Specify when to add moves and when not
 function clicked(card) {
   if(card.classList.contains("show") || card.classList.contains("open")) {
     return true;
@@ -52,11 +54,13 @@ function clicked(card) {
   return false;
 }
 
+// Add specific classes when card is clicked
 function displayer(card) {
   card.classList.add("open");
   card.classList.add("show");
 }
 
+// handle number of moves when click even occur
 function movesHandler() {
   movesCounter ++;
   if(movesCounter === 1) {
@@ -67,6 +71,8 @@ function movesHandler() {
     document.querySelector(".checker").innerHTML = "Moves";
   }
 }
+
+// check if cards is matched or not
 function isMatch(activeCards) {
   let con0 = activeCards[0].innerHTML != activeCards[1].innerHTML;
   let con1 = activeCards[0].isSameNode(activeCards[1]);
@@ -76,12 +82,14 @@ function isMatch(activeCards) {
   return true;
 }
 
+//if cards is matched add specific class(es)
 function matched(activeCards) {
   for(var i = 0; i < activeCards.length; i++) {
     activeCards[i].classList.add("match");
   }
 }
 
+//if cards is notmatched remove specific class(es)
 function notMatched(activeCards) {
   setTimeout(function(){
     for (var i = 0; i < activeCards.length; i++) {
@@ -91,6 +99,7 @@ function notMatched(activeCards) {
   },800);
 }
 
+//Main function that control all another functions
 function opened(card) {
   if(activeCards.length >0) {
     movesHandler();
