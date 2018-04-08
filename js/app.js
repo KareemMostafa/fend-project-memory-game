@@ -64,6 +64,14 @@ function matched(activeCards) {
   }
 }
 
+function notMatched(activeCards) {
+  for (var i = 0; i < activeCards.length; i++) {
+    activeCards[i].classList.remove("open");
+    activeCards[i].classList.remove("show");
+  }
+  activeCards = [];
+}
+
 function opened(card) {
   if(activeCards.length >0) {
     movesHandler();
