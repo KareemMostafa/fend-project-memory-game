@@ -17,7 +17,7 @@ holdCards.forEach(function(elem) {
 function cardsOpener() {
   for (var i = 0; i < cards.length ; i += 1) {
     cards[i].onclick = function () {
-
+      matcher(this);
     }
   }
 }
@@ -35,3 +35,8 @@ function shuffle(array) {
 
     return array;
 }
+
+function matcher(card) {
+
+}
+cardsOpener();
