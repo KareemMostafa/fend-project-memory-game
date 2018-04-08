@@ -58,6 +58,12 @@ function movesHandler() {
   }
 }
 
+function matched(activeCards) {
+  for(var i = 0; i < activeCards.length; i++) {
+    activeCards[i].classList.add("match");
+  }
+}
+
 function opened(card) {
   if(activeCards.length >0) {
     movesHandler();
