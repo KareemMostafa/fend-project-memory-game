@@ -37,11 +37,15 @@ function shuffle(array) {
 }
 
 function matcher(card) {
-
 }
 
 function displayer(card) {
   card.classList.add("open");
   card.classList.add("show");
 }
+
+function opened(card) {
+
+}
+
 cardsOpener();
