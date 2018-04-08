@@ -37,6 +37,8 @@ function shuffle(array) {
 }
 
 function matcher(card) {
+  displayer(card);
+  opened(card);
 }
 
 function displayer(card) {
