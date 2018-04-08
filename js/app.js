@@ -62,6 +62,7 @@ function matched(activeCards) {
   for(var i = 0; i < activeCards.length; i++) {
     activeCards[i].classList.add("match");
   }
+  activeCards = [];
 }
 
 function notMatched(activeCards) {
