@@ -121,38 +121,14 @@ function opened(card) {
   }
 }
 
-//This function is used from https://sweetalert2.github.io/
+//This function is used from https://sweetalert2.github.io/ to show winning message
 function sweetAlert() {
   swal({
     title: 'Congratulations',
-    text: "Your Score is",
-    type: 'success',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Play again',
-    cancelButtonText: 'Stay',
-    confirmButtonClass: 'btn btn-success',
-    cancelButtonClass: 'btn btn-danger',
-    buttonsStyling: false,
-    reverseButtons: true
-  }).then((result) => {
-    if (result.value) {
-      swal(
-        'Have fun!',
-        'Your file has been deleted.',
-        'success'
-      )
-  } else if (
-    // Read more about handling dismissals
-    result.dismiss === swal.DismissReason.cancel
-  ) {
-      swal(
-        'The End',
-        '',
-        ''
-      )
-    }
+    text: 'It took you '+ movesCounter + ' moves',
+    animation: false,
+    customClass: 'animated tada',
+    confirmButtonText: 'Play again'
   })
 }
 
