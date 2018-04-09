@@ -3,6 +3,7 @@ let holdCards    = [...cards];
 let deck         = document.querySelector(".deck");
 let activeCards  = [];
 let movesCounter = 0;
+const rating     = document.querySelectorAll(".fa-star");
 
 //Shuffle cards
 function cardsShuffler() {
