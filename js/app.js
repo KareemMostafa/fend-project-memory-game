@@ -6,10 +6,15 @@ let movesCounter = 0;
 
 //Shuffle cards
 function cardsShuffler() {
-shuffle(holdCards);
-holdCards.forEach(function(elem) {
+  shuffle(holdCards);
+  holdCards.forEach(function(elem) {
     deck.append(elem);
-});
+  });
+}
+
+//Reset page when restart button is clicked
+document.querySelector('.restart').onclick = function () {
+  window.location.reload();
 }
 
 //Open cards when it's called and functions are applied to them
