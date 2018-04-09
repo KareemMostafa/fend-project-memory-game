@@ -121,6 +121,16 @@ function opened(card) {
   }
 }
 
+function allMatched() {
+  let all = true;
+  $('.card').each(function(){
+    return all = $(this).hasClass("match");
+  });
+  if(all) {
+    sweetAlert();
+  }
+}
+
 //This function is used from https://sweetalert2.github.io/ to show winning message
 function sweetAlert() {
   swal({
