@@ -114,7 +114,7 @@ function notMatched(activeCards) {
       activeCards[i].classList.remove("open");
       activeCards[i].classList.remove("show");
     }
-  },800);
+  },400);
 }
 
 //Main function that control all another functions
