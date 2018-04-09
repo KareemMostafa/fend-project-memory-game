@@ -119,6 +119,7 @@ function opened(card) {
     activeCards.push(card);
     movesHandler();
   }
+  allMatched();
 }
 
 function allMatched() {
