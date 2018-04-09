@@ -64,7 +64,7 @@ function displayer(card) {
   card.classList.add("show");
 }
 
-// handle number of moves when click even occur
+// handle number of moves and stars when click event occur
 function movesHandler() {
   movesCounter ++;
   if(movesCounter === 1) {
@@ -73,6 +73,20 @@ function movesHandler() {
   }else{
     document.querySelector(".moves").innerHTML  = movesCounter;
     document.querySelector(".checker").innerHTML = "Moves";
+  }
+  if (movesCounter > 14 && movesCounter < 18){
+        for( i= 0; i < 3; i++){
+            if(i > 1){
+                rating[i].style.visibility = "hidden";
+            }
+        }
+    }
+    else if (movesCounter > 18){
+        for( i= 0; i < 3; i++){
+            if(i > 0){
+                rating[i].style.visibility = "hidden";
+      }
+    }
   }
 }
 
