@@ -107,6 +107,8 @@ function isMatch(activeCards) {
 function matched(activeCards) {
   for(var i = 0; i < activeCards.length; i++) {
     activeCards[i].classList.add("match");
+    activeCards[i].classList.add("animated");
+    activeCards[i].classList.add("bounceOutDown");
   }
 }
 
