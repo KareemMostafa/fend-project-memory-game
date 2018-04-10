@@ -133,7 +133,7 @@ function matched(activeCards) {
   for(var i = 0; i < activeCards.length; i++) {
     activeCards[i].classList.add("match");
     activeCards[i].classList.add("animated");
-    activeCards[i].classList.add("bounceOutDown");
+    activeCards[i].classList.add("flip");
   }
 }
 
@@ -142,7 +142,7 @@ function notMatched(activeCards) {
   for(var i = 0 ; i<activeCards.length; i++){
     activeCards[i].classList.add("wrong");
     activeCards[i].classList.add("animated");
-    activeCards[i].classList.add("bounce");
+    activeCards[i].classList.add("flash");
   }
   setTimeout(function() {
     for (var i = 0; i < activeCards.length; i++) {
@@ -150,9 +150,9 @@ function notMatched(activeCards) {
       activeCards[i].classList.remove("show");
       activeCards[i].classList.remove("wrong");
       activeCards[i].classList.remove("animated");
-      activeCards[i].classList.remove("bounce");
+      activeCards[i].classList.remove("flash");
     }
-  },400);
+  },500);
 }
 
 //Main function that control all another functions
