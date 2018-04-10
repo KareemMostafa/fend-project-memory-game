@@ -154,10 +154,14 @@ function allMatched() {
 function sweetAlert() {
   swal({
     title: 'Congratulations',
-    text: 'It took you '+ movesCounter + ' moves',
+    text: 'It took you '+ movesCounter + ' moves '+ ' and ' + numberOfStars + ' Star(s) ',
     animation: false,
     customClass: 'animated tada',
     confirmButtonText: 'Play again'
+  }).then((result)=> {
+    if(result.value) {
+      window.location.reload();
+    }
   })
 }
 
