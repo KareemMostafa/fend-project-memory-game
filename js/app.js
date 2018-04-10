@@ -112,10 +112,18 @@ function matched(activeCards) {
 
 //if cards is notmatched remove specific class(es)
 function notMatched(activeCards) {
-  setTimeout(function(){
+  for(var i = 0 ; i<activeCards.length; i++){
+    activeCards[i].classList.add("wrong");
+    activeCards[i].classList.add("animated");
+    activeCards[i].classList.add("bounce");
+  }
+  setTimeout(function() {
     for (var i = 0; i < activeCards.length; i++) {
       activeCards[i].classList.remove("open");
       activeCards[i].classList.remove("show");
+      activeCards[i].classList.remove("wrong");
+      activeCards[i].classList.remove("animated");
+      activeCards[i].classList.remove("bounce");
     }
   },400);
 }
