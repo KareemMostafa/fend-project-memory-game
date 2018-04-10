@@ -102,6 +102,22 @@ function movesHandler() {
   }
 }
 
+// startTimer from : https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#5-the-timer
+function startTimer(){
+    interval = setInterval(function(){
+        timer.innerHTML = minute+"mins "+second+"secs";
+        second++;
+        if(second == 60){
+            minute++;
+            second = 0;
+        }
+        if(minute == 60){
+            hour++;
+            minute = 0;
+        }
+    },1000);
+}
+
 // check if cards is matched or not
 function isMatch(activeCards) {
   let con0 = activeCards[0].innerHTML != activeCards[1].innerHTML;
