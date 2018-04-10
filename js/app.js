@@ -91,7 +91,14 @@ function movesHandler() {
     }
     numberOfStars = 1;
   }
+  if(movesCounter == 1){
+    second = 0;
+    minute = 0;
+    hour = 0;
+    timer();
+  }
 }
+
 
 // check if cards is matched or not
 function isMatch(activeCards) {
