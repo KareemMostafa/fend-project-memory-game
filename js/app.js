@@ -7,7 +7,6 @@ const rating      = document.querySelectorAll(".fa-star");
 let numberOfStars = 3;
 let second = 0, minute = 0;
 let timer = document.querySelector(".timer");
-let interval;
 
 //Shuffle cards
 function cardsShuffler() {
