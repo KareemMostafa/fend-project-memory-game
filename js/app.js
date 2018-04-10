@@ -5,6 +5,9 @@ let activeCards   = [];
 let movesCounter  = 0;
 const rating      = document.querySelectorAll(".fa-star");
 let numberOfStars = 3;
+let second = 0, minute = 0;
+let timer = document.querySelector(".timer");
+let interval;
 
 //Shuffle cards
 function cardsShuffler() {
@@ -65,7 +68,7 @@ function displayer(card) {
   card.classList.add("show");
 }
 
-// handle number of moves and stars when click event occur
+// handle number of moves, stars and start timer when click event occur
 function movesHandler() {
   movesCounter ++;
   if(movesCounter === 1) {
@@ -95,10 +98,9 @@ function movesHandler() {
     second = 0;
     minute = 0;
     hour = 0;
-    timer();
+    startTimer();
   }
 }
-
 
 // check if cards is matched or not
 function isMatch(activeCards) {
