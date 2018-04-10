@@ -166,7 +166,7 @@ function sweetAlert() {
     title: 'Congratulations',
     text: 'It took you '+ movesCounter + ' moves '+ ' and ' + numberOfStars + ' Star(s) ',
     animation: false,
-    customClass: 'animated tada',
+    customClass: 'animated bounceInDown',
     confirmButtonText: 'Play again'
   }).then((result)=> {
     if(result.value) {
