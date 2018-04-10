@@ -94,12 +94,6 @@ function movesHandler() {
     }
     numberOfStars = 1;
   }
-  if(movesCounter == 1){
-    second = 0;
-    minute = 0;
-    hour = 0;
-    startTimer();
-  }
 }
 
 // startTimer from : https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#5-the-timer
@@ -110,10 +104,6 @@ function startTimer(){
         if(second == 60){
             minute++;
             second = 0;
-        }
-        if(minute == 60){
-            hour++;
-            minute = 0;
         }
     },1000);
 }
@@ -189,7 +179,7 @@ function allMatched() {
 function sweetAlert() {
   swal({
     title: 'Congratulations',
-    text: 'It took you '+ movesCounter + ' moves '+ ' and ' + numberOfStars + ' Star(s) ',
+    text: 'It took you '+ movesCounter + ' moves '+ ' and ' + numberOfStars + ' Star(s) ' + timer.innerHTML,
     animation: false,
     customClass: 'animated bounceInDown',
     confirmButtonText: 'Play again'
@@ -200,5 +190,6 @@ function sweetAlert() {
   })
 }
 
+startTimer();
 cardsShuffler();
 cardsOpener();
