@@ -1,9 +1,10 @@
-let cards        = document.querySelectorAll(".card");
-let holdCards    = [...cards];
-let deck         = document.querySelector(".deck");
-let activeCards  = [];
-let movesCounter = 0;
-const rating     = document.querySelectorAll(".fa-star");
+let cards         = document.querySelectorAll(".card");
+let holdCards     = [...cards];
+let deck          = document.querySelector(".deck");
+let activeCards   = [];
+let movesCounter  = 0;
+const rating      = document.querySelectorAll(".fa-star");
+let numberOfStars = 3;
 
 //Shuffle cards
 function cardsShuffler() {
