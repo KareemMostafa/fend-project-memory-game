@@ -81,7 +81,7 @@ h1 {
     font-size: 33px;
 }
 
-.wrong {
+.deck .card.wrong {
     background: #ff0000;
 }
 
