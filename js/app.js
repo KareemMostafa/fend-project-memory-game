@@ -74,19 +74,21 @@ function movesHandler() {
     document.querySelector(".moves").innerHTML  = movesCounter;
     document.querySelector(".checker").innerHTML = "Moves";
   }
-  if (movesCounter > 14 && movesCounter < 18){
-        for( i= 0; i < 3; i++){
-            if(i > 1){
-                rating[i].style.visibility = "hidden";
-            }
-        }
-    }
-    else if (movesCounter > 18){
-        for( i= 0; i < 3; i++){
-            if(i > 0){
-                rating[i].style.visibility = "hidden";
+  if(movesCounter > 30 && movesCounter < 32) {
+    for( i= 0; i < 3; i++) {
+      if(i > 1) {
+        rating[i].style.visibility = "hidden";
       }
     }
+    numberOfStars = 2;
+  }
+  else if (movesCounter > 40) {
+    for( i= 0; i < 3; i++) {
+      if(i > 0) {
+        rating[i].style.visibility = "hidden";
+      }
+    }
+    numberOfStars = 1;
   }
 }
 
