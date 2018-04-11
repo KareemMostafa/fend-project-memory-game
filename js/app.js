@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 let cards = document.querySelectorAll(".card");
 let holdCards = [...cards];
 let deck = document.querySelector(".deck");
@@ -8,6 +9,7 @@ let numberOfStars = 3;
 let second = 0;
 let minute = 0;
 let timer = document.querySelector(".timer");
+let interval;
 
 //Shuffle cards
 function cardsShuffler() {
@@ -20,14 +22,14 @@ function cardsShuffler() {
 //Reset page when restart button is clicked
 document.querySelector('.restart').onclick = function() {
     window.location.reload();
-}
+};
 
 //Open cards when it's called and functions are applied to them
 function cardsOpener() {
     for (var i = 0; i < cards.length; i += 1) {
         cards[i].onclick = function() {
             matcher(this);
-        }
+        };
     }
 }
 // Shuffle function from http://stackoverflow.com/a/2450976
@@ -87,9 +89,9 @@ function movesHandler() {
         }
         numberOfStars = 2;
     } else if (movesCounter > 40) {
-        for (var i = 0; i < 3; i++) {
-            if (i > 0) {
-                rating[i].style.visibility = "hidden";
+        for (var x = 0; x < 3; x++) {
+            if (x > 0) {
+                rating[x].style.visibility = "hidden";
             }
         }
         numberOfStars = 1;
@@ -168,11 +170,19 @@ function opened(card) {
 function allMatched() {
     let all = true;
     $('.card').each(function() {
-        return all = $(this).hasClass("match");
+        all = $(this).hasClass("match");
+        return all;
     });
     if (all) {
         sweetAlert();
+        stopTimer();
     }
+}
+
+//function to stop the timer when the player wins
+function stopTimer() {
+    timer.innerHTML = timer.innerHTML;
+    clearInterval(interval);
 }
 
 //This function is used from https://sweetalert2.github.io/ to show winning message
