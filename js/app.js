@@ -178,7 +178,7 @@ function allMatched() {
 function sweetAlert() {
   swal({
     title: 'Congratulations',
-    text: 'It took you '+ movesCounter + ' moves '+ ' and ' + numberOfStars + ' Star(s) ' + timer.innerHTML,
+    text: movesCounter + ' moves '+ ' and ' + numberOfStars + ' Star(s) ' + ' in ' + timer.innerHTML,
     animation: false,
     customClass: 'animated bounceInDown',
     confirmButtonText: 'Play again'
